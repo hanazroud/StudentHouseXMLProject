@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student_house.xsl"?>
+<!DOCTYPE residence_etudiante SYSTEM "C:\tp soa\fichier_maven\src\main\resources\student_house.dtd">  <!-- //relation entre les autres files -->
+
+<residences_etudiantes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:noNamespaceSchemaLocation="student_house.xsd">
+
+    <residence id="R001" nom="Résidence Sfax Centre" localisation="Sfax">
+        <chambres>
+            <chambre numero="101" type="Simple" prix="180" disponible="oui"/>
+            <chambre numero="102" type="Double" prix="250" disponible="non"/>
+            <chambre numero="103" type="Simple" prix="180" disponible="oui"/>
+        </chambres>
+
+        <etudiants>
+            <etudiant id="E001" nom="Hana Zroud" genre="F" age="21" chambre_ref="102">
+                <paiement mois="Octobre" montant="250" statut="payé"/>
+            </etudiant>
+            <etudiant id="E002" nom="Ali Ben Amor" genre="M" age="23" chambre_ref="103">
+                <paiement mois="Octobre" montant="180" statut="non_payé"/>
+            </etudiant>
+        </etudiants>
+    </residence>
+
+    <residence id="R002" nom="Résidence El Mourouj" localisation="Tunis">
+        <chambres>
+            <chambre numero="201" type="Double" prix="220" disponible="oui"/>
+            <chambre numero="202" type="Simple" prix="170" disponible="non"/>
+        </chambres>
+    </residence>
+
+</residences_etudiantes>
